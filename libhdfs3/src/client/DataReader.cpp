@@ -202,7 +202,7 @@ std::vector<char>& DataReader::readResponse(const char* text, int &outsize) {
             }
             int offset;
             int pos = decrypted.find(&buf[0], 0, size);
-            if (pos == (int)string::npos) {
+            if (pos == (int)std::string::npos) {
                 THROW(HdfsIOException, "cannot parse wrapped datanode data response: %s",
                   text);
             }
